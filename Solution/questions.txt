@@ -1,1 +1,0 @@
-doit on delete le tableau quand on a déjà delete tous les sous tableaux?

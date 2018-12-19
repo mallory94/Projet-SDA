@@ -1,0 +1,7 @@
+﻿  tableau2D.cpp
+c:\users\mallory\source\repos\projet-sda\solution\solution\tableau2d.cpp(19): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\mallory\source\repos\projet-sda\solution\solution\tableau2d.cpp(26): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\mallory\source\repos\projet-sda\solution\solution\tableau2d.cpp(27): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\mallory\source\repos\projet-sda\solution\solution\tableau2d.cpp(35): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\mallory\source\repos\projet-sda\solution\solution\tableau2d.cpp(37): warning C4018: '<' : incompatibilité signed/unsigned
+  Solution.vcxproj -> C:\Users\mallory\source\repos\Projet-SDA\Solution\Debug\Solution.exe
