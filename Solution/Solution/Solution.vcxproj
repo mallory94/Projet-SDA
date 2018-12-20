@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Item.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="tableau2D.h" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="tableau2D_old" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Solution.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

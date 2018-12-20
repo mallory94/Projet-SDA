@@ -9,10 +9,9 @@ int main() {
 	cin >> nbL >> nbC;
 	initialiser(taquin,nbL,nbC);
 	lire(taquin);
-	cout << "la fonction lire le taquin s'est effectuée" << endl;
 	afficher(taquin);
 	detruire(taquin);
-	/*system("pause");*/
+	system("pause");
 	return(0);
 }
 
