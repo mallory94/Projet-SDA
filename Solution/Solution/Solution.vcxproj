@@ -23,6 +23,7 @@
     <ProjectGuid>{4E874D48-4941-46DD-B2F5-951BFAED5399}</ProjectGuid>
     <RootNamespace>Solution</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>Sprint1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -115,10 +116,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="documentation.txt" />
-    <Text Include="questions.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Item.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="tableau2D.h" />
@@ -126,9 +123,6 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tableau2D.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="tableau2D_old" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc" />

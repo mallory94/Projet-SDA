@@ -15,10 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="documentation.txt" />
-    <Text Include="questions.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Item.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -36,9 +32,6 @@
     <ClCompile Include="tableau2D.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="tableau2D_old" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">
