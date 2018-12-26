@@ -11,9 +11,6 @@ struct Taquin {
 	unsigned int nbC;
 };
 
-// Afficher un état du taquin
-void afficher(const Etat& e);
-
 // Créer le jeu de taquin avec l'état initial
 void initialiser(Taquin& t);
 

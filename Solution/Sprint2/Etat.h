@@ -9,4 +9,7 @@ struct Etat {
 	Tab2D damier_précédent;
 };
 
+// Afficher un état du taquin
+void afficher(const Etat& e);
+	
 #endif

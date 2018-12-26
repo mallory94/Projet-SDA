@@ -3,16 +3,16 @@
 *
 */
 
+#include <iostream>
 #include "Taquin.h"
 
-// Afficher un état du taquin
-void afficher(const Etat& e) {
-
-}
+using namespace std;
 
 // Créer le jeu de taquin avec l'état initial
 void initialiser(Taquin& t) {
-
+	unsigned int nbL, nbC;
+	cin >> nbL >> nbC;
+	initialiser(t.LEAE.taquin, nbL, nbC);
 }
 
 // Itération de l'algorithme de recherche

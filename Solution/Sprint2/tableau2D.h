@@ -1,5 +1,10 @@
 #ifndef _TABLEAU2D_
 #define _TABLEAU2D_
+/*
+*
+*
+*/
+
 #include "Item.h"
 
 struct Tab2D {
@@ -18,4 +23,4 @@ void lire(Tab2D& m);
 // Afficher un Tableau2D
 void afficher(const Tab2D& m);
 
-#endif 
+#endif

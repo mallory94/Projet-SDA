@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="etat.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tableau2D.cpp" />
     <ClCompile Include="taquin.cpp" />
