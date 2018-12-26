@@ -5,7 +5,7 @@
 
 struct Etat {
 	Tab2D damier_resultant;
-	enum etat {NORD, EST, SUD, OUEST};
+	enum Mouvement {NORD, EST, SUD, OUEST};
 	Tab2D damier_précédent;
 };
 
