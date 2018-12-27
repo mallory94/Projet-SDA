@@ -20,4 +20,10 @@ void jouer(Taquin& t);
 // Afficher le contenu des listes à dev et dev
 void afficher(Taquin& t);
 
+/* vérifie si il éxiste un unique état de LEAE est de valeur
+* g minimale
+*
+*/
+void
+
 #endif

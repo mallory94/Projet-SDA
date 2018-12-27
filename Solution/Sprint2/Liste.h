@@ -6,12 +6,12 @@
 * @dbrief Composant de liste
 */
 
+#include "Etat.h"
 #include "tableau2D.h"
 
 struct Liste {
 	Tab2D taquin;
-
-	Liste& element_suivant;
+	Etat *premier_element;
 	unsigned int capacité;
 };
 
