@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="etat.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pile.cpp" />
     <ClCompile Include="tableau2D.cpp" />
     <ClCompile Include="taquin.cpp" />
   </ItemGroup>
@@ -28,6 +29,7 @@
     <ClInclude Include="Etat.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Liste.h" />
+    <ClInclude Include="Pile.h" />
     <ClInclude Include="tableau2D.h" />
     <ClInclude Include="Taquin.h" />
   </ItemGroup>

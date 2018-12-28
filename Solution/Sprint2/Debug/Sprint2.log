@@ -1,1 +1,18 @@
-﻿
+﻿  etat.cpp
+  main.cpp
+c:\users\load\source\repos\projet-sda\solution\sprint2\liste.h(20): warning C4101: 'indicateur' : variable locale non référencée
+c:\users\load\source\repos\projet-sda\solution\sprint2\main.cpp(11): error C2120: 'void' non conforme avec tous types
+c:\users\load\source\repos\projet-sda\solution\sprint2\main.cpp(11): warning C4326: le type de retour de 'main' doit être 'int' au lieu de 'void'
+c:\users\load\source\repos\projet-sda\solution\sprint2\main.cpp(17): error C2562: 'main' : fonction 'void' retournant une valeur
+  c:\users\load\source\repos\projet-sda\solution\sprint2\main.cpp(11): note: voir la déclaration de 'main'
+  tableau2D.cpp
+  taquin.cpp
+c:\users\load\source\repos\projet-sda\solution\sprint2\liste.h(20): warning C4101: 'indicateur' : variable locale non référencée
+c:\users\load\source\repos\projet-sda\solution\sprint2\taquin.cpp(9): error C2059: erreur de syntaxe : 'using namespace'
+c:\users\load\source\repos\projet-sda\solution\sprint2\taquin.cpp(14): error C2065: 'cin' : identificateur non déclaré
+c:\users\load\source\repos\projet-sda\solution\sprint2\taquin.cpp(27): error C2059: erreur de syntaxe : ')'
+c:\users\load\source\repos\projet-sda\solution\sprint2\taquin.cpp(28): error C2143: erreur de syntaxe : absence de ';' avant '{'
+c:\users\load\source\repos\projet-sda\solution\sprint2\taquin.cpp(37): error C2065: 'cout' : identificateur non déclaré
+c:\users\load\source\repos\projet-sda\solution\sprint2\taquin.cpp(37): error C2065: 'endl' : identificateur non déclaré
+c:\users\load\source\repos\projet-sda\solution\sprint2\taquin.cpp(38): error C2065: 'endl' : identificateur non déclaré
+  Génération de code en cours...
