@@ -23,13 +23,10 @@ void jouer(Taquin& t) {
 	bool solutionTrouvee = false;
 
 	while (t.LEAE.capacité > 0) {
-		unsigned
-			for () {
 
-			}
 		if ()
 		{
-
+			
 		}
 	}
 
