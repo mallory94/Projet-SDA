@@ -3,7 +3,7 @@
 
 /**
 * @file Liste.h
-* @dbrief Composant de liste
+* @brief Composant de liste
 */
 
 #include "Etat.h"

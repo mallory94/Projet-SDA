@@ -21,14 +21,17 @@ void initialiser(Taquin& t) {
 // Itération de l'algorithme de recherche
 void jouer(Taquin& t) {
 	bool solutionTrouvee = false;
-
+	
+	Tab2D* solutions;
+	initialiser_sol(solutions);
+	/*  ALGORITHME A*
 	while (t.LEAE.capacité > 0) {
 
 		if ()
 		{
 			
 		}
-	}
+	} */
 
 }
 
@@ -38,4 +41,10 @@ void afficher(Taquin& t) {
 		<< "Iteration 0" << endl << "*** LEE - long : 0" << endl << endl;
 	afficher(t.LEAE.taquin);
 	detruire(t.LEAE.taquin);
+}
+
+bool etat_courant_est_final(Taquin& t, ) {
+	for () {
+		e.damier_resultant ==
+	}
 }

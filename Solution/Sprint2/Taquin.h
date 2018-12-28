@@ -24,6 +24,5 @@ void afficher(Taquin& t);
 * g minimale
 *
 */
-void
 
 #endif
