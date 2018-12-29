@@ -25,4 +25,7 @@ void afficher(Taquin& t);
 *
 */
 
+// désalloue la mémoire du taquin
+void detruire_taquin(Taquin& t);
+
 #endif

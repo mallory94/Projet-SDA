@@ -18,12 +18,10 @@ void initialiser(Tab2D& m, unsigned int nbL, unsigned int nbC) {
 }
 // Desallouer un Tableau2D
 void detruire(Tab2D& m) {
-
 	for (unsigned int i = 0; i < m.nbL; i++) {
 		delete[] m.tab[i];
 	}
 	delete m.tab;
-
 }
 // Lire un Tableau2D
 void lire(Tab2D& m) {

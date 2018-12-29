@@ -1,11 +1,11 @@
-#infdef _PILE_
+#ifndef _PILE_
 #define _PILE_
 
 /**
 * @file Pile.h
 * @brief Composant de pile
 */
-#include Item.h
+#include "Item.h"
 
 struct Pile {
 	unsigned int capacite; // capacité de la pile (c>0) 

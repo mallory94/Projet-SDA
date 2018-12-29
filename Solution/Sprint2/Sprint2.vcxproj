@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="etat.cpp" />
+    <ClCompile Include="liste.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="solution.cpp" />
     <ClCompile Include="tableau2D.cpp" />
