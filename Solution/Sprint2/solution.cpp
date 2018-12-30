@@ -44,8 +44,9 @@ void detruire_solution(Tab2D *solution, unsigned int nbL, unsigned int nbC) {
 }
 
 void afficher_solution(Tab2D *solution, unsigned int nbL, unsigned int nbC) {
+	unsigned int nb_lu;
 	for (unsigned int k = 0; k < nbC; k++) {
-		unsigned int nb_lu;
+		cout << endl << "une des solution du taquin" << endl;
 		for (unsigned int i = 0; i < solution[k].nbL; i++) {
 			cout << "  ";
 			for (unsigned int j = 0; j < solution[k].nbC; j++) {
@@ -61,13 +62,18 @@ void afficher_solution(Tab2D *solution, unsigned int nbL, unsigned int nbC) {
 }
 
 bool etre_solution(Tab2D* solution, Tab2D &taquin) {
+	unsigned int compteur = 0;
 	for (unsigned int k = 0; k < taquin.nbC; k++) {
 		for (unsigned int i = 0; i < taquin.nbL; i++) {
 			for (unsigned int j = 0; j < taquin.nbC; j++) {
-				if (solution[k].tab[i][j] != taquin.tab[i][j])
-					return (false);
+				if (solution[k].tab[i][j] == taquin.tab[i][j])
+					compteur++;
 			}
 		}
+		if (compteur == solution->nbC*solution->nbL)
+			return(true);
+		else
+			compteur = 0;
 	}
-	return(true);
+	return(false);
 }

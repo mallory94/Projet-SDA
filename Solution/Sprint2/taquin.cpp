@@ -16,7 +16,8 @@ void initialiser(Taquin& t) {
 	cin >> nbL >> nbC;
 	t.nbL = nbL;
 	t.nbC = nbC;
-	initialiser_LEAE(t.LEAE, nbL, nbC);
+	initialiser_LEAE(t.LEAE, t.nbL, t.nbC);
+	initialiser_LEE(t.LEE, t.nbL, t.nbC);
 }
 
 // Itération de l'algorithme de recherche
@@ -24,11 +25,17 @@ void jouer(Taquin& t) {
 	bool solutionTrouvee = false;
 	Tab2D *solution = new Tab2D[t.nbC];
 	initialiser_solution(solution, t.nbL, t.nbC);
+	afficher_solution(solution, t.nbL, t.nbC);
 	if (etre_solution(solution, t.LEAE.premier_element->damier_resultant)) {
 		solutionTrouvee = true;
+		cout << "le taquin est resolu" << endl; //A RETIRER
 	}
-	afficher_solution(solution, t.nbL, t.nbC);
+	else
+		cout << "le taquin n'est pas resolu" << endl;
+	//afficher_solution(solution, t.nbL, t.nbC);
+	detruire(t.LEAE.premier_element->damier_resultant);
 	detruire_solution(solution, t.nbL, t.nbC);
+	//if (solutionTrouvee = true ) POUR 
 }
 
 // Afficher le contenu des listes à dev et dev

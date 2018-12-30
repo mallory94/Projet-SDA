@@ -23,3 +23,11 @@ void afficher(const Etat& e) {
 		cout << endl;
 	}
 }
+
+
+void initialiser_etat(Etat &e, unsigned int &nbL, unsigned int &nbC) {
+	initialiser(e.damier_précédent, nbL, nbC);
+	initialiser(e.damier_resultant, nbL, nbC);
+
+}
+

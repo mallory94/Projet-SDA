@@ -18,6 +18,14 @@ struct Liste {
 
 void initialiser_LEAE(Liste &liste, unsigned int &nbL, unsigned int &nbC);
 
+
+void initialiser_LEE(Liste &liste, unsigned int &nbL, unsigned int &nbC);
+
+void detruire_LEAE(Liste &liste, unsigned int &nbL, unsigned int &nbC);
+
+void ajouter_etat(Liste &liste, Etat &e);
+
+
 // Analyse si il existe un unique état de LEAE avec une valeur g minimale
 /*bool unique_etat_min(Liste& Liste) {
 	bool indicateur; //indique si 

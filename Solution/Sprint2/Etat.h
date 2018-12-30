@@ -14,5 +14,6 @@ struct Etat {
 // Afficher un état du taquin
 void afficher(const Etat& e);
 
+void initialiser_etat(Etat &e, unsigned int &nbL, unsigned int &nbC);
 
 #endif

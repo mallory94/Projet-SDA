@@ -2,11 +2,12 @@
 #include "Item.h"
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
 
 using namespace std;
 
 // Allouer en mémoire dynamique un Tableau2D
-void initialiser(Tab2D& m, unsigned int nbL, unsigned int nbC) {
+void initialiser(Tab2D &m, unsigned int nbL, unsigned int nbC) {
 	m.tab = new Item*[nbL]; // alloue la mémoire au double pointeur se déplaçant sur les différents tableaux 1D
 	for (unsigned int i = 0; i < nbL; i++) {
 		m.tab[i] = new Item[nbC]; //alloue la mémoire à chaque tableau 1D qui constituent le tableau 2D
@@ -25,14 +26,14 @@ void detruire(Tab2D& m) {
 }
 // Lire un Tableau2D
 void lire(Tab2D& m) {
-	unsigned char element_lu;
+	char element_lu[255];
 	for (unsigned int i = 0; i < m.nbL; i++) {
 		for (unsigned int j = 0; j < m.nbC; j++) {
 			cin >> element_lu;
-			if (element_lu == '#')
+			if (element_lu[0] == '#')
 				m.tab[i][j] = 0;
 			else
-				m.tab[i][j] = element_lu - 48;
+				m.tab[i][j] = atoi(element_lu);
 		}
 	}
 }
