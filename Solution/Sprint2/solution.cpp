@@ -46,7 +46,7 @@ void detruire_solution(Tab2D *solution, unsigned int nbL, unsigned int nbC) {
 void afficher_solution(Tab2D *solution, unsigned int nbL, unsigned int nbC) {
 	unsigned int nb_lu;
 	for (unsigned int k = 0; k < nbC; k++) {
-		cout << endl << "une des solution du taquin" << endl;
+		cout << endl << "une des solutions du taquin" << endl;
 		for (unsigned int i = 0; i < solution[k].nbL; i++) {
 			cout << "  ";
 			for (unsigned int j = 0; j < solution[k].nbC; j++) {

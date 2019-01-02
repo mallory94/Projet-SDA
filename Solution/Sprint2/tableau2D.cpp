@@ -22,7 +22,7 @@ void detruire(Tab2D& m) {
 	for (unsigned int i = 0; i < m.nbL; i++) {
 		delete[] m.tab[i];
 	}
-	delete m.tab;
+	delete[] m.tab;
 }
 // Lire un Tableau2D
 void lire(Tab2D& m) {
@@ -37,18 +37,28 @@ void lire(Tab2D& m) {
 		}
 	}
 }
+
+void recopie_tableau(Tab2D &destination, Tab2D &source) {
+	destination.nbC = source.nbC;
+	destination.nbL = source.nbL;
+	for (unsigned int i = 0; i < destination.nbL; i++) {
+		for (unsigned int j = 0; j < destination.nbC; j++) {
+			destination.tab[i][j] = source.tab[i][j];
+		}
+	}
+}
+
 // Afficher un Tableau2D
 void afficher(const Tab2D& m) {
 	unsigned int nb_lu;
-	cout << "Damier : " << m.nbL << " lignes, " << m.nbC << " colonnes" << endl;
 	for (unsigned int i = 0; i < m.nbL; i++) {
 		cout << "  ";
 		for (unsigned int j = 0; j < m.nbC; j++) {
 			nb_lu = m.tab[i][j];
 			if (nb_lu == 0)
-				cout << '#' << " ";
+				cout << '#' << "  ";
 			else
-				cout << nb_lu << " ";
+				cout << nb_lu << "  ";
 		}
 		cout << endl;
 	}

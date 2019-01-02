@@ -12,7 +12,6 @@
 int main() {
 	Taquin t;
 	initialiser(t);
-	afficher(t);
 	jouer(t);
 	system("pause");
 	return(0);
