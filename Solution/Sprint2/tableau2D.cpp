@@ -11,12 +11,11 @@ void initialiser(Tab2D &m, unsigned int nbL, unsigned int nbC) {
 	m.tab = new Item*[nbL]; // alloue la mémoire au double pointeur se déplaçant sur les différents tableaux 1D
 	for (unsigned int i = 0; i < nbL; i++) {
 		m.tab[i] = new Item[nbC]; //alloue la mémoire à chaque tableau 1D qui constituent le tableau 2D
-		/*for (unsigned int y = 0; y < nbC; y++)
-			m.tab[i][y] = NULL;*/
 	}
 	m.nbL = nbL;
 	m.nbC = nbC;
 }
+
 // Desallouer un Tableau2D
 void detruire(Tab2D& m) {
 	for (unsigned int i = 0; i < m.nbL; i++) {
