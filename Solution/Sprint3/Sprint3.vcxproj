@@ -18,6 +18,24 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="etat.cpp" />
+    <ClCompile Include="liste.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pile.cpp" />
+    <ClCompile Include="solution.cpp" />
+    <ClCompile Include="tableau2D.cpp" />
+    <ClCompile Include="taquin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Etat.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="Liste.h" />
+    <ClInclude Include="Pile.h" />
+    <ClInclude Include="Solution.h" />
+    <ClInclude Include="tableau2D.h" />
+    <ClInclude Include="Taquin.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{1B22FE77-7E76-48D8-92C1-83C192CBC37A}</ProjectGuid>
@@ -114,8 +132,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
