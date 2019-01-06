@@ -1,3 +1,9 @@
+/**
+ * @file Solution.h
+ * @brief Prototypage des fonctions associées aux taquins solution
+ * @author Mallory GACK 101 Nicolas ORVAIN 101
+ * @version 1.0 02/01/2019
+ */
 #ifndef _SOLUTION_
 #define _SOLUTION_
 

@@ -1,4 +1,9 @@
-
+/**
+ * @file solution.cpp
+ * @brief Codage des fonctions associées aux taquins solution
+ * @author Mallory GACK 101 Nicolas ORVAIN 101
+ * @version 1.0 02/01/2019
+ */
 #include "Solution.h"
 #include "tableau2D.h"
 #include "Item.h"

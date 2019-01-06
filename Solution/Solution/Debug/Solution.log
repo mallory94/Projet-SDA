@@ -1,1 +1,9 @@
-﻿
+﻿  main.cpp
+  tableau2D.cpp
+c:\users\load\source\repos\projet-sda\solution\solution\tableau2d.cpp(22): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\load\source\repos\projet-sda\solution\solution\tableau2d.cpp(31): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\load\source\repos\projet-sda\solution\solution\tableau2d.cpp(32): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\load\source\repos\projet-sda\solution\solution\tableau2d.cpp(45): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\load\source\repos\projet-sda\solution\solution\tableau2d.cpp(47): warning C4018: '<' : incompatibilité signed/unsigned
+  Génération de code en cours...
+  Solution.vcxproj -> C:\Users\Load\source\repos\Projet-SDA\Solution\Debug\Sprint1.exe

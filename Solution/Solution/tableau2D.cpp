@@ -1,3 +1,9 @@
+/**
+ * @file tableau2D.cpp
+ * @brief Codage des fonctions associées à Tab2D
+ * @author Mallory GACK 101 Nicolas ORVAIN 101
+ * @version 1.0 26/12/2018
+ */
 #include "tableau2D.h"
 #include "Item.h"
 #include <iostream>

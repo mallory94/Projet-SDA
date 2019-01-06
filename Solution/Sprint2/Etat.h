@@ -1,3 +1,9 @@
+/**
+ * @file Etat.h
+ * @brief Structuration des types Etat (du damier) et Poisition_du_trou et type énuméré Mouvement
+ * @author Mallory GACK 101 Nicolas ORVAIN 101
+ * @version 1.0 02/01/2019
+ */
 #ifndef _ETAT_
 #define _ETAT_
 

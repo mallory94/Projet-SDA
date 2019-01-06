@@ -1,8 +1,9 @@
 /**
-*
-*
-*/
-
+ * @file taquin.cpp
+ * @brief Codage des fonctions associées au type Taquin
+ * @author Mallory GACK 101 Nicolas ORVAIN 101
+ * @version 1.0 02/01/2019
+ */
 #include <iostream>
 #include "Taquin.h"
 #include "Solution.h"

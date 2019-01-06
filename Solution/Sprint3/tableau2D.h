@@ -1,9 +1,11 @@
+/**
+ * @file tableau2D.h
+ * @brief Structuration de Tab2D et prototypage des fonctions associées
+ * @author Mallory GACK 101 Nicolas ORVAIN 101
+ * @version 1.0 26/12/2018
+ */
 #ifndef _TABLEAU2D_
 #define _TABLEAU2D_
-/*
-*
-*
-*/
 
 #include "Item.h"
 

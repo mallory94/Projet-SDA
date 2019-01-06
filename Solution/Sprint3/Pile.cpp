@@ -1,10 +1,11 @@
+/**
+ * @file Pile.cpp
+ * @brief Codage des fonctions associées au TAD Pile
+ * @author Mallory GACK 101 Nicolas ORVAIN 101
+ * @version 1.0 06/01/2019
+ */
 #include "Pile.h"
 #include <cassert>
-/**
- *
- *
- *
-*/
 
 /**
  *@brief Initialiser une pile vide
@@ -69,7 +70,7 @@ bool estPleine(const Pile& p) {
 void empiler(Pile& p, const Item& it) {
 	assert(!estPleine(p));
 	p.sommet++;
-	p.tab[P.sommet] = it;
+	p.tab[p.sommet] = it;
 }
 /**
  *@brief Dépiler l'item au sommet de la pile

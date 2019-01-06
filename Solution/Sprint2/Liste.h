@@ -1,10 +1,11 @@
+/**
+ * @file Liste.h
+ * @brief Composant de liste
+ * @author Mallory GACK 101 Nicolas ORVAIN 101
+ * @version 1.0 02/01/2019
+ */
 #ifndef _LISTE_
 #define _LISTE_
-
-/**
-* @file Liste.h
-* @brief Composant de liste
-*/
 
 #include "Etat.h"
 #include "tableau2D.h"

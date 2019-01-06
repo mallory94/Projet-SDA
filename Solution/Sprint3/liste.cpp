@@ -1,4 +1,9 @@
-
+/**
+ * @file liste.cpp
+ * @brief Codage des fonctions associées au TAD Liste
+ * @author Mallory GACK 101 Nicolas ORVAIN 101
+ * @version 1.0 02/01/2019
+ */
 #include "Liste.h"
 #include <cstdio>
 #include "Etat.h"

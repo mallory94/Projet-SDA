@@ -1,3 +1,9 @@
+/**
+ * @file Taquin.h
+ * @brief Structuration du type Taquin et prototypage des fonctions associées
+ * @author Mallory GACK 101 Nicolas ORVAIN 101
+ * @version 1.0 02/01/2019
+ */
 #ifndef _TAQUIN_
 #define _TAQUIN_
 
