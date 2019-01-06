@@ -11,8 +11,8 @@
 struct Tab2D {
 	Item** tab; // adresse du tableau bidimensionnel
 							// en mémoire dynamique
-	int nbL; // nombre de lignes de la matrice
-	int nbC; // nombre de colonnes de la matrice
+	unsigned int nbL; // nombre de lignes de la matrice
+	unsigned int nbC; // nombre de colonnes de la matrice
 };
 
 // Allouer en mémoire dynamique un Tableau2D
