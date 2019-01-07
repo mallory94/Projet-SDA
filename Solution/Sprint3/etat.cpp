@@ -11,24 +11,31 @@ using namespace std;
 
 // Afficher un état du taquin
 
-void afficher(const Etat& e) {
-	if (e.mouvement >= 0 && e.mouvement <= 3)
-		cout << e.mouvement;
-	afficher(e.damier_resultant);
-	unsigned int nb_lu;
-	for (unsigned int i = 0; i < e.damier_resultant.nbL; i++) {
-		cout << "  ";
-		for (unsigned int j = 0; j < e.damier_resultant.nbC; j++) {
-			nb_lu = e.damier_resultant.tab[i][j];
-			if (nb_lu == 0)
-				cout << '#' << " ";
-			else
-				cout << nb_lu << " ";
+void afficher_etat(const Etat& e) {
+	
+	if (e.mouvement >= 0 && e.mouvement <= 3) {
+		switch (e.mouvement) {
+		case 0:
+			cout << "NORD" << endl;
+			break;
+		case 1:
+			cout << "EST" << endl;
+			break;
+		case 2:
+			cout << "SUD" << endl;
+			break;
+		case 3:
+			cout << "OUEST" << endl;
+			break;
+		default:
+			break;
 		}
-		cout << endl;
 	}
+	afficher(e.damier_resultant);
+	cout << "f=g+h=" << e.g << "+" << e.h << "=" << e.g + e.h << endl;
+	
+	
 }
-
 
 void initialiser_etat(Etat &e, unsigned int &nbL, unsigned int &nbC) {
 	initialiser(e.damier_précédent, nbL, nbC);

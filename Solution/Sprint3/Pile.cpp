@@ -39,7 +39,7 @@ void detruire(Pile& p) {
  *@pre la pile n'est pas vide
  */
 Item sommet(const Pile& p) {
-	assert(!estvide(p));
+	assert(!estVide(p));
 	return p.tab[p.sommet];
 }
 

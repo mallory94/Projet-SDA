@@ -66,7 +66,7 @@ void supprimer_etat_courant(Liste &liste) {
 *
 *
 */
-void ajouter_etat(Liste &liste, Etat &e, Position_du_trou &position,
+void ajouter_etat(Taquin& t, Liste &liste, Etat &e, Position_du_trou &position,
 	unsigned int mouvement) {
 	unsigned int tmp;
 	liste.capacité++;
@@ -130,29 +130,9 @@ void afficher_liste(Liste &liste) {
 	unsigned int i;
 	liste.etat_courant = liste.premier_element;
 	for (i = 0; i < liste.capacité; i++) {
-		if (liste.etat_courant->mouvement >= 0 && liste.etat_courant->mouvement <= 3) {
-			switch (liste.etat_courant->mouvement) {
-			case 0:
-				cout << "NORD" << endl;
-				break;
-			case 1:
-				cout << "EST" << endl;
-				break;
-			case 2:
-				cout << "SUD" << endl;
-				break;
-			case 3:
-				cout << "OUEST" << endl;
-				break;
-			default:
-				break;
-			}
-		}
-		afficher(liste.etat_courant->damier_resultant);
+		afficher_etat(*liste.etat_courant);
 		if (liste.capacité > 1) {
 			liste.etat_courant = liste.etat_courant->etat_suivant;
 		}
 	}
-	if (i < 0)
-		liste.etat_courant = NULL;
 }

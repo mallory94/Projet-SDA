@@ -21,10 +21,12 @@ struct Etat {
 	Mouvement mouvement;
 	Tab2D damier_précédent;
 	Etat *etat_suivant;
+	unsigned int g = 0;
+	unsigned int h = 0;
 };
 
 // Afficher un état du taquin
-void afficher(const Etat& e);
+void afficher_etat(const Etat& e);
 
 void initialiser_etat(Etat &e, unsigned int &nbL, unsigned int &nbC);
 

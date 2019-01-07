@@ -66,7 +66,7 @@ void afficher_solution(Tab2D *solution, unsigned int nbL, unsigned int nbC) {
 	}
 }
 
-bool etre_solution(Tab2D* solution, Tab2D &taquin) {
+bool but(Tab2D* solution, Tab2D &taquin) {
 	unsigned int compteur = 0;
 	for (unsigned int k = 0; k < taquin.nbC; k++) {
 		for (unsigned int i = 0; i < taquin.nbL; i++) {

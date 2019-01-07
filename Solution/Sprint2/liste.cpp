@@ -153,6 +153,4 @@ void afficher_liste(Liste &liste) {
 			liste.etat_courant = liste.etat_courant->etat_suivant;
 		}
 	}
-	if (i < 0)
-		liste.etat_courant = NULL;
 }

@@ -16,6 +16,6 @@ void detruire_solution(Tab2D* solution, unsigned int nbL, unsigned int nbC);
 
 void afficher_solution(Tab2D* solution, unsigned int nbL, unsigned int nbC);
 
-bool etre_solution(Tab2D* solution, Tab2D &taquin);
+bool but(Tab2D* solution, Tab2D &taquin);
 
 #endif

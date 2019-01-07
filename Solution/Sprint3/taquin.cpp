@@ -22,7 +22,7 @@ void initialiser(Taquin& t) {
 }
 
 // Itération de l'algorithme de recherche
-void jouer(Taquin& t) {
+bool jouer(Taquin& t) {
 	bool solutionTrouvee = false;
 	Tab2D *solution = new Tab2D[t.nbC];
 	unsigned int nb_iteration = 1;
@@ -31,10 +31,9 @@ void jouer(Taquin& t) {
 	//afficher_solution(solution, t.nbL, t.nbC);
 	cout << "Damier : " << t.nbL << " lignes, " << t.nbC << " colonnes" << endl;
 	for (unsigned int i = 0; i < nb_iteration + 1; i++) {
-		if (etre_solution(solution, t.LEAE.premier_element->damier_resultant)) {
+		if (but(solution, t.LEAE.premier_element->damier_resultant)) {
 			solutionTrouvee = true;
-			cout << endl << "le taquin est deja resolu" << endl;
-			return;
+			break;
 		}
 		else {
 			cout << "Iteration " << i << endl;
@@ -44,21 +43,25 @@ void jouer(Taquin& t) {
 				inserer_LEAE_vers_LEE(t.LEAE, t.LEE);
 				supprimer_etat_courant_de_LEAE(t.LEAE);
 				scan_mouvement_possible(*t.LEE.etat_courant, position);
-				if (position.nord == true)
-					ajouter_etat(t.LEAE, *t.LEE.etat_courant, position, 0);
-				if (position.est == true)
-					ajouter_etat(t.LEAE, *t.LEE.etat_courant, position, 3);
-				if (position.sud == true)
-					ajouter_etat(t.LEAE, *t.LEE.etat_courant, position, 2);
-				if (position.ouest == true)
-					ajouter_etat(t.LEAE, *t.LEE.etat_courant, position, 1);
+				if (position.nord == true) {
+					ajouter_etat(t, t.LEAE, *t.LEE.etat_courant, position, 0);
+				}
+				if (position.est == true) {
+					ajouter_etat(t, t.LEAE, *t.LEE.etat_courant, position, 3);
+				}
+				if (position.sud == true) {
+					ajouter_etat(t, t.LEAE, *t.LEE.etat_courant, position, 2);
+				}
+				if (position.ouest == true) {
+					ajouter_etat(t, t.LEAE, *t.LEE.etat_courant, position, 1);
+				}
 			}
 		}
 	}
 
 	//afficher_solution(solution, t.nbL, t.nbC);
 	detruire_solution(solution, t.nbL, t.nbC);
-	//if (solutionTrouvee = true ) POUR 
+	return(solutionTrouvee);
 }
 
 // Afficher le contenu des listes à dev et dev
@@ -72,9 +75,43 @@ void afficher(Taquin& t) {
 }
 
 
+bool appartient(const Etat& ef, Taquin& t) {
+	unsigned int compteur= t.nbC*t.nbL;
+	for (unsigned int indice_cap; indice_cap < t.LEAE.capacité; indice_cap++) {
+		t.LEAE.etat_courant = t.LEAE.premier_element;
+		 
+		for (unsigned int i = 0; i < t.nbL; i++) {
+			for (unsigned int j = 0; j < t.nbC; j++) {
+				if (ef.damier_resultant.tab[i][j] == t.LEAE.etat_courant->damier_resultant.tab[i][j] )
+					compteur++;
+			}
+		}
+		if (compteur == t.nbC*t.nbL)
+			return(true);
+		
+		
+	}
+}
+
+/*bool but(Tab2D* solution, Tab2D &taquin) {
+	unsigned int compteur = 0;
+	for (unsigned int k = 0; k < taquin.nbC; k++) {
+		for (unsigned int i = 0; i < taquin.nbL; i++) {
+			for (unsigned int j = 0; j < taquin.nbC; j++) {
+				if (solution[k].tab[i][j] == taquin.tab[i][j])
+					compteur++;
+			}
+		}
+		if (compteur == solution->nbC*solution->nbL)
+			return(true);
+		else
+			compteur = 0;
+	}
+	return(false);
+}*/
+
 void detruire_taquin(Taquin &t, unsigned int &nbL, unsigned int &nbC) {
 	detruire(t.LEAE.premier_element->damier_resultant);
 	detruire_liste(t.LEAE, nbL, nbC);
 	detruire_liste(t.LEE, nbL, nbC);
 }
-

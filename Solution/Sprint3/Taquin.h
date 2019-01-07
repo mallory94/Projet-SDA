@@ -21,7 +21,7 @@ struct Taquin {
 void initialiser(Taquin& t);
 
 // Itération de l'algorithme de recherche
-void jouer(Taquin& t);
+bool jouer(Taquin& t);
 
 // Afficher le contenu des listes à dev et dev
 void afficher(Taquin& t);
@@ -31,7 +31,7 @@ void afficher(Taquin& t);
 *
 */
 
-// désalloue la mémoire du taquin
-void detruire_taquin(Taquin& t);
+//renvoie vrai si l'état existe deja dans le taquin 
+bool appartient(const Etat& ef, Taquin& t);
 
 #endif
