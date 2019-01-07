@@ -9,7 +9,6 @@
 
 #include "Etat.h"
 #include "tableau2D.h"
-#include "taquin.h"
 
 struct Liste {
 	Etat *premier_element;
@@ -26,8 +25,7 @@ void initialiser_LEE(Liste &liste, unsigned int &nbL, unsigned int &nbC);
 
 void detruire_liste(Liste &liste, unsigned int &nbL, unsigned int &nbC);
 
-void ajouter_etat(Taquin& t, Liste &liste, Etat &e, Position_du_trou &position,
-	unsigned int mouvement);
+
 
 void recopie_tableau(Tab2D &destination, Tab2D &source);
 

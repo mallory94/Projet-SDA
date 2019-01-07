@@ -60,65 +60,7 @@ void supprimer_etat_courant(Liste &liste) {
 	detruire(liste.etat_courant->damier_précédent);
 }
 
-/*ajoute a la liste (LEAE) des etats en fonctions des mouvements possibles
-* et de l'état de départ
-* Etat e étant l'état précédent
-*
-*
-*/
-void ajouter_etat(Taquin& t, Liste &liste, Etat &e, Position_du_trou &position,
-	unsigned int mouvement) {
-	unsigned int tmp;
-	liste.capacité++;
-	liste.dernier_element = new Etat;
-	liste.dernier_element->etat_precedent = liste.etat_courant;
-	liste.etat_courant->etat_suivant = liste.dernier_element;
-	liste.etat_courant = liste.dernier_element;
-	if (liste.capacité == 1) {
-		liste.premier_element = liste.etat_courant;
-	}
-	initialiser_etat(*liste.dernier_element, e.damier_resultant.nbL,
-		e.damier_resultant.nbC);
-	recopie_tableau(liste.dernier_element->damier_resultant, e.damier_resultant);
-	liste.dernier_element->damier_précédent = e.damier_resultant;
-	switch (mouvement)
-	{
-	case 0: //nord
-		swap
-		(liste.dernier_element->damier_resultant.
-			tab[position.ligne][position.colonne],
-			liste.dernier_element->damier_resultant.
-			tab[position.ligne - 1][position.colonne]);
-		liste.dernier_element->mouvement = NORD;
-		break;
-	case 1: //ouest
-		swap
-		(liste.dernier_element->damier_resultant.
-			tab[position.ligne][position.colonne],
-			liste.dernier_element->damier_resultant.
-			tab[position.ligne][position.colonne-1]);
-		liste.dernier_element->mouvement = OUEST;
-		break;
-	case 2: //sud
-		swap(liste.dernier_element->damier_resultant.
-			tab[position.ligne][position.colonne],
-			liste.dernier_element->damier_resultant.
-			tab[position.ligne+1][position.colonne]);
-		liste.dernier_element->mouvement = SUD;
-		break;
-	case 3: //est
-		swap
-		(liste.dernier_element->damier_resultant.
-			tab[position.ligne][position.colonne],
-			liste.dernier_element->damier_resultant.
-			tab[position.ligne][position.colonne+1]);
-		liste.dernier_element->mouvement = EST;
-		break;
-	default:
-		break;
-	}
-	liste.dernier_element = liste.dernier_element->etat_suivant;
-}
+
 
 void detruire_liste(Liste &liste, unsigned int &nbL, unsigned int &nbC) {
 	for (unsigned int i = 0; i < liste.capacité; i++) {

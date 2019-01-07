@@ -34,4 +34,7 @@ void afficher(Taquin& t);
 //renvoie vrai si l'état existe deja dans le taquin 
 bool appartient(const Etat& ef, Taquin& t);
 
+void ajouter_etat(Taquin &t, Liste &liste, Etat &e, Position_du_trou &position,
+	unsigned int mouvement);
+
 #endif

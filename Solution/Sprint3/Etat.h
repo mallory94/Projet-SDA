@@ -8,6 +8,7 @@
 #define _ETAT_
 
 #include "tableau2D.h"
+
 enum Mouvement { NORD, EST, SUD, OUEST };
 
 struct Position_du_trou {

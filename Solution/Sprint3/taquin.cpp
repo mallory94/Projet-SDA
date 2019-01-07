@@ -77,7 +77,7 @@ void afficher(Taquin& t) {
 
 bool appartient(const Etat& ef, Taquin& t) {
 	unsigned int compteur= t.nbC*t.nbL;
-	for (unsigned int indice_cap; indice_cap < t.LEAE.capacité; indice_cap++) {
+	for (unsigned int indice_cap = 0; indice_cap < t.LEAE.capacité; indice_cap++) {
 		t.LEAE.etat_courant = t.LEAE.premier_element;
 		 
 		for (unsigned int i = 0; i < t.nbL; i++) {
@@ -91,6 +91,7 @@ bool appartient(const Etat& ef, Taquin& t) {
 		
 		
 	}
+	return(false);
 }
 
 /*bool but(Tab2D* solution, Tab2D &taquin) {
@@ -114,4 +115,64 @@ void detruire_taquin(Taquin &t, unsigned int &nbL, unsigned int &nbC) {
 	detruire(t.LEAE.premier_element->damier_resultant);
 	detruire_liste(t.LEAE, nbL, nbC);
 	detruire_liste(t.LEE, nbL, nbC);
+}
+
+
+/*ajoute a la liste (LEAE) des etats en fonctions des mouvements possibles
+* et de l'état de départ
+* Etat e étant l'état précédent
+*
+*
+*/
+void ajouter_etat(Taquin &t, Liste &liste, Etat &e, Position_du_trou &position,
+	unsigned int mouvement) {
+	liste.capacité++;
+	liste.dernier_element = new Etat;
+	liste.dernier_element->etat_precedent = liste.etat_courant;
+	liste.etat_courant->etat_suivant = liste.dernier_element;
+	liste.etat_courant = liste.dernier_element;
+	if (liste.capacité == 1) {
+		liste.premier_element = liste.etat_courant;
+	}
+	initialiser_etat(*liste.dernier_element, e.damier_resultant.nbL,
+		e.damier_resultant.nbC);
+	recopie_tableau(liste.dernier_element->damier_resultant, e.damier_resultant);
+	liste.dernier_element->damier_précédent = e.damier_resultant;
+	switch (mouvement)
+	{
+	case 0: //nord
+		swap
+		(liste.dernier_element->damier_resultant.
+			tab[position.ligne][position.colonne],
+			liste.dernier_element->damier_resultant.
+			tab[position.ligne - 1][position.colonne]);
+		liste.dernier_element->mouvement = NORD;
+		break;
+	case 1: //ouest
+		swap
+		(liste.dernier_element->damier_resultant.
+			tab[position.ligne][position.colonne],
+			liste.dernier_element->damier_resultant.
+			tab[position.ligne][position.colonne - 1]);
+		liste.dernier_element->mouvement = OUEST;
+		break;
+	case 2: //sud
+		swap(liste.dernier_element->damier_resultant.
+			tab[position.ligne][position.colonne],
+			liste.dernier_element->damier_resultant.
+			tab[position.ligne + 1][position.colonne]);
+		liste.dernier_element->mouvement = SUD;
+		break;
+	case 3: //est
+		swap
+		(liste.dernier_element->damier_resultant.
+			tab[position.ligne][position.colonne],
+			liste.dernier_element->damier_resultant.
+			tab[position.ligne][position.colonne + 1]);
+		liste.dernier_element->mouvement = EST;
+		break;
+	default:
+		break;
+	}
+	liste.dernier_element = liste.dernier_element->etat_suivant;
 }
